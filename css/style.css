@@ -199,6 +199,68 @@ body {
   background-color: #ffffff;
 }
 
+.conversation {
+  display: flex;
+  width: 100%;
+  height: 72px;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.conversation:hover,
+.conversation.active {
+  background-color: #e8e8e8;
+}
+
+.conversation__image {
+  flex-basis: 50px;
+}
+
+.conversation__image img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-left: 16px;
+  border-radius: 50%;
+}
+
+.conversation__titles {
+  display: flex;
+  flex-basis: 70%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 16px;
+}
+
+.conversation__titles .title__name {
+  font-size: 16px;
+  color: #000000;
+}
+
+.conversation__titles .title__message {
+  font-size: 12px;
+  overflow: hidden;
+  padding-top: 3px;
+  white-space: nowrap;
+  color: #9d9d9d;
+}
+
+.conversation__time {
+  display: flex;
+  flex-basis: 10%;
+  height: 100%;
+  margin-right: 5px;
+}
+
+.conversation__time .time__last_message {
+  font-size: 12px;
+  margin-top: 20px;
+  margin-right: 12px;
+  color: #000000;
+}
+
 /* DIV DESTRO MESSAGGI */
 .container-message {
   display: flex;
@@ -248,4 +310,85 @@ body {
 .message_send {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+/* TEMPLATE SINGOLI MESSAGGI */
+
+.message__me,
+.message__user {
+  position: relative;
+  min-width: 120px;
+  max-width: 70%;
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 20px 30px 20px 20px;
+  color: #262626;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px -2px #cfcfcf;
+}
+
+.message__user {
+  display: flex;
+  align-self: flex-start;
+  background-color: white;
+}
+
+.message__me {
+  display: flex;
+  align-self: flex-end;
+  background-color: #dcf8c5;
+}
+
+
+.message__me .message_time,
+.message__user .message_time {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(158, 158, 158);
+}
+
+.display-none{
+  display: none;
+}
+
+/* ICONE MENU OPZIONI */
+.message__user .message__icon,
+.message__me .message__icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #b4b8ba;
+  cursor: pointer;
+}
+
+/* MENU OPZIONI */
+.message_menu {
+  display: none;
+  position: absolute;
+  top: 28px;
+  right: 8px;
+  z-index: 2;
+  padding: 15px 0;
+  list-style-type: none;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 4px -2px #cfcfcf;
+}
+
+.message_menu li {
+  display: block;
+  height: 40px;
+  font-size: 14px;
+  line-height: 40px;
+  padding: 0 24px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #000000;
+}
+
+.message_menu li:hover {
+  background-color: #f2f2f2;
 }
