@@ -28,12 +28,13 @@ body {
   width: 35%;
   min-width: 350px;
   height: 100%;
+  border-right: 1px solid #e3e3e3;
 }
 
 .main-container__right {
   position: relative;
   width: 65%;
-  min-width: 300px;
+  min-width: 600px;
   height: 100%;
   background-image: url("../img/bg-chat.jpg");
   background-repeat: repeat;
@@ -46,24 +47,26 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 70px;
-  background-color: #eeeeee;
+  background-color: #ededed;
 }
 
 /* CONTENUTO TOP MENU SINISTRO E DESTRO */
 .left__top-menu__right ul,
 .right__top-menu__right ul {
-	display: flex;
-	height: 100%;
-	align-items: center;
-	list-style-type: none;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  list-style-type: none;
 }
 
 .left__top-menu__right ul li,
 .right__top-menu__right ul li {
-	height: 100%;
-	margin-right: 25px;
+  height: 100%;
+  margin-right: 25px;
 }
 
+.message_send svg,
+.right__input-message__icon svg,
 .left__top-menu__right ul li a,
 .right__top-menu__right ul li a {
   color: #808181;
@@ -71,7 +74,7 @@ body {
 
 .left__top-menu__right ul li a svg,
 .right__top-menu__right ul li a svg {
-	height: 100%;
+  height: 100%;
 }
 
 .left__top-menu__left,
@@ -79,26 +82,41 @@ body {
   display: flex;
   align-items: center;
 }
+
 .image img {
-	display: block;
-	width: 40px;
-	height: 40px;
-	margin-left: 16px;
-	border-radius: 50%;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-left: 16px;
+  border-radius: 50%;
 }
 
-.left__top-menu__right svg,
-.right__top-menu__right svg {
-  width: 24px;
-  height: 24px;
+.top-menu__left__status {
+  display: flex;
+  flex-direction: column;
 }
+
+.top-menu__left__status a {
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.left__status__name {
+  color: #000000;
+}
+
+.left__status__last-access {
+  color: rgb(113, 113, 113);
+  font-size: 0.7em;
+}
+
 /* DIV BARRA NOTIFICHE */
 .left__notification {
   display: flex;
   align-items: center;
   width: 100%;
   height: 80px;
-  background-color: #06d755;
+  background-color: #fed859;
 }
 
 .left__notification__icon {
@@ -106,7 +124,7 @@ body {
   height: 50px;
   border-radius: 50%;
   text-align: center;
-  color: #06d755;
+  color: #fed859;
   line-height: 50px;
   font-size: 20px;
   margin-left: 16px;
@@ -121,11 +139,11 @@ body {
 .left__notification__text h3 {
   font-size: 1em;
   font-weight: 700;
-  color: #024e42;
+  color: #413e34;
 }
 
 .left__notification__text a {
-  color: #024e42;
+  color: #413e34;
   font-size: .9em;
 }
 
@@ -135,7 +153,7 @@ body {
   height: 50px;
   padding: 10px 16px;
   border-bottom: 1px solid #e3e3e3;
-  background-color: #eeeeee;
+  background-color: #f8f8f8;
 }
 
 .left__search-bar .container {
@@ -154,15 +172,23 @@ body {
   margin-left: 20px;
 }
 
+.search_bar_icon_search {
+  color: #b4b8ba;
+}
+
 .container .search-bar__input {
   font-size: 14px;
   font-weight: 400;
   width: 77%;
   padding-left: 20px;
-  color: #8a8a8a;
+  color: #b4b8ba;
   border: none;
   outline: none;
   background-color: #ffffff;
+}
+
+.container .search-bar__input::placeholder {
+  color: #b4b8ba;
 }
 
 /* DIV SINISTRO DELLA LISTA CONVERSAZIONI */
@@ -171,4 +197,55 @@ body {
   height: calc(100% - 70px - 80px - 50px);
   overflow: auto;
   background-color: #ffffff;
+}
+
+/* DIV DESTRO MESSAGGI */
+.container-message {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - 70px - 70px);
+  overflow-y: scroll;
+  padding: 0 80px;
+}
+
+/* DIV INPUT MESSAGGIO */
+.right__input-message {
+  padding: 0 16px;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  background-color: #ededed;
+}
+
+.input_message {
+  font-size: 14px;
+  width: 100%;
+  padding: 10px;
+  color: #acacac;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+.input_message::placeholder {
+  color: #b4b8ba;
+}
+
+.right__input-message__icon svg,
+.message_send svg {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  line-height: 40px;
+}
+
+.right__input-message__icon {
+  padding-right: 20px;
+}
+
+.message_send {
+  padding-left: 20px;
+  padding-right: 20px;
 }
