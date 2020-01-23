@@ -1,16 +1,35 @@
 $(document).ready(function() {
 
   $(document).on('click', '.message_send', function() {
-    invioMessaggio()
+    invioMessaggio();
+  });
+
+
+  var visible = false;
+  $(document).on('click', '.message__icon', function() {
+
+    if (visible == false) {
+      $(this).find('.message_menu').fadeIn();
+      visible = true;
+    } else {
+      $(this).find('.message_menu').fadeOut();
+      visible = false;
+    }
   });
 
   $('.input_message').keypress(
     function() {
       if (event.which == 13 || event.keyCode == 13) {
-        invioMessaggio()
+        invioMessaggio();
       }
     }
   );
+
+  $(document).on('click', '.delete-message', function() {
+
+      $this.find('#remove').remove();
+
+  });
 });
 
 
