@@ -9,16 +9,166 @@ body {
   display: flex;
   height: 100vh;
   width: 100vw;
-  background: -moz-linear-gradient(top, #009688 0%, #009688 22%, #dddbd1 22%, #dddbd1 22%, #dddbd1 100%);
-  background: -webkit-linear-gradient(top, #009688 0%, #009688 22%, #dddbd1 22%, #dddbd1 22%, #dddbd1 100%);
-  background: linear-gradient(to bottom, #009688 0%, #009688 22%, #dddbd1 22%, #dddbd1 22%, #dddbd1 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009688', endColorstr='#dddbd1', GradientType=0);
+  font-size: 16px;
+  background: -moz-linear-gradient(top, #2cbda5 0%, #2cbda5 22%, #dddbd1 22%, #dddbd1 22%, #dddbd1 100%);
+  background: -webkit-linear-gradient(top, #2cbda5 0%, #2cbda5 22%, #dddbd1 22%, #dddbd1 22%, #dddbd1 100%);
+  background: linear-gradient(to bottom, #2cbda5 0%, #2cbda5 22%, #dddbd1 22%, #dddbd1 22%, #dddbd1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2cbda5', endColorstr='#dddbd1', GradientType=0);
 }
 
 .main-container {
   display: flex;
-  width: 1400px;
+  width: 90%;
   height: 95%;
   margin: auto;
-  background-color: red;
+  background-color: #ffffff;
+}
+
+.main-container__left {
+  width: 35%;
+  min-width: 350px;
+  height: 100%;
+}
+
+.main-container__right {
+  position: relative;
+  width: 65%;
+  min-width: 300px;
+  height: 100%;
+  background-image: url("../img/bg-chat.jpg");
+  background-repeat: repeat;
+  background-size: 400px;
+}
+
+.left__top-menu,
+.right__top-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  background-color: #eeeeee;
+}
+
+/* CONTENUTO TOP MENU SINISTRO E DESTRO */
+.left__top-menu__right ul,
+.right__top-menu__right ul {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	list-style-type: none;
+}
+
+.left__top-menu__right ul li,
+.right__top-menu__right ul li {
+	height: 100%;
+	margin-right: 25px;
+}
+
+.left__top-menu__right ul li a,
+.right__top-menu__right ul li a {
+  color: #808181;
+}
+
+.left__top-menu__right ul li a svg,
+.right__top-menu__right ul li a svg {
+	height: 100%;
+}
+
+.left__top-menu__left,
+.right__top-menu__left {
+  display: flex;
+  align-items: center;
+}
+.image img {
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin-left: 16px;
+	border-radius: 50%;
+}
+
+.left__top-menu__right svg,
+.right__top-menu__right svg {
+  width: 24px;
+  height: 24px;
+}
+/* DIV BARRA NOTIFICHE */
+.left__notification {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: #06d755;
+}
+
+.left__notification__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  color: #06d755;
+  line-height: 50px;
+  font-size: 20px;
+  margin-left: 16px;
+  background: #ffffff;
+}
+
+.left__notification__text {
+  flex-basis: 70%;
+  padding-left: 16px;
+}
+
+.left__notification__text h3 {
+  font-size: 1em;
+  font-weight: 700;
+  color: #024e42;
+}
+
+.left__notification__text a {
+  color: #024e42;
+  font-size: .9em;
+}
+
+/* DIV BARRA RICERCA */
+.left__search-bar {
+  width: 100%;
+  height: 50px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e3e3e3;
+  background-color: #eeeeee;
+}
+
+.left__search-bar .container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.left__search-bar .container a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 20px;
+}
+
+.container .search-bar__input {
+  font-size: 14px;
+  font-weight: 400;
+  width: 77%;
+  padding-left: 20px;
+  color: #8a8a8a;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* DIV SINISTRO DELLA LISTA CONVERSAZIONI */
+.left__conversations {
+  width: 100%;
+  height: calc(100% - 70px - 80px - 50px);
+  overflow: auto;
+  background-color: #ffffff;
 }
