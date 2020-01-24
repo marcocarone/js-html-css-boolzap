@@ -75,7 +75,7 @@
       </div>
       <!-- DIV LISTA CONVERSAZIONI -->
       <div class="left__conversations">
-        <div class="conversation">
+        <div class="conversation" data-chat="1">
           <a class="conversation__image" href="#">
             <img alt="" src="img/lellis.jpg">
           </a>
@@ -87,7 +87,7 @@
             <span class="time__last_message">10:30</span>
           </div>
         </div>
-        <div class="conversation">
+        <div class="conversation" data-chat="2">
           <a class="conversation__image" href="#">
             <img alt="" src="img/nargi.jpg">
           </a>
@@ -99,7 +99,7 @@
             <span class="time__last_message">10:10</span>
           </div>
         </div>
-        <div class="conversation">
+        <div class="conversation" data-chat="3">
           <a class="conversation__image" href="#">
             <img alt="" src="img/belen.jpg">
           </a>
@@ -157,24 +157,30 @@
       <!-- DIV MESAGGI -->
       <div class="container-message">
 
-
-        <div class="message__user">
-          <div class="message__icon">
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="message_menu">
-            <ul>
-              <li>Info messaggio</li>
-              <li>Cancella messaggio</li>
-            </ul>
-          </div>
-          <span class="message_text">Marco, come stai?</span>
-          <div class="message_time">
-            <span>15:30</span>
+        <div  class="right-messages active" data-chat="1">
+          <div class="message__user">
+            <div class="message__icon">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="message_menu">
+              <ul>
+                <li>Info messaggio</li>
+                <li>Cancella messaggio</li>
+              </ul>
+            </div>
+            <span class="message_text">Marco, come stai?</span>
+            <div class="message_time">
+              <span>15:30</span>
+            </div>
           </div>
         </div>
 
+        <div  class="right-messages" data-chat="2">
 
+        </div>
+        <div  class="right-messages" data-chat="3">
+          
+        </div>
 
       </div>
       <!-- TEMPLATE COPIA -->

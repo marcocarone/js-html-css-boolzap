@@ -44,6 +44,21 @@ $(document).ready(function() {
     });
   });
 
+
+  // COLLEGARE CONTATTO  ALLA CHAT
+  $(document).on('click', '.conversation', function() {
+
+    var dataChat = $(this).attr('data-chat');
+    if ($('.conversation').hasClass("active") == true) {
+      $('.conversation').removeClass('active');
+      $('.right-messages').removeClass('active');
+    }
+    $(this).addClass('active');
+    $('.right-messages[data-chat="' + dataChat + '"]').addClass('active');
+  });
+
+
+
 });
 
 // FUNZIONI SCRIPT
@@ -53,14 +68,14 @@ function invioMessaggio() {
     var messaggioClonato = $('.container-message + .template_me').clone();
     messaggioClonato.find('.message_text').text(testoInput);
     messaggioClonato.find('.message_time').text(orario());
-    $('.container-message').append(messaggioClonato);
+    $('.right-messages.active').append(messaggioClonato);
     $('.container-message .template_me').removeClass('display-none');
     $('.input_message').val("");
     //FUNZIONE MESSAGGIO DI RISPOSTA BOT
     setTimeout(function() {
       var messaggioRisposta2 = $('.template-user').children().clone();
       messaggioRisposta2.find('.message_time').text(orario());
-      $('.container-message').append(messaggioRisposta2);
+      $('.right-messages.active').append(messaggioRisposta2);
       $('.container-message .message__user').removeClass('display-none');
     }, 2000);
   }
