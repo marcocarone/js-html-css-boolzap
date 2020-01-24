@@ -22,6 +22,9 @@ $(document).ready(function() {
     function() {
       if (event.which == 13 || event.keyCode == 13) {
         invioMessaggio();
+        setTimeout(function() {
+          MessaggioRisposta();
+        }, 2000);
       }
     }
   );
