@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+// FUNZIONE INVIO MESSAGGIO CON CLICK MOUSE
   $(document).on('click', '.message_send', function() {
     invioMessaggio();
     setTimeout(function() {
@@ -7,6 +8,7 @@ $(document).ready(function() {
     }, 2000);
   });
 
+// MENU TENDINA OPZIONI
   var visible = false;
   $(document).on('click', '.message__icon', function() {
     if (visible == false) {
@@ -18,6 +20,7 @@ $(document).ready(function() {
     }
   });
 
+// FUNZIONE INVIO MESSAGGIO CON TASTO INVIO TASTIERA
   $('.input_message').keypress(
     function() {
       if (event.which == 13 || event.keyCode == 13) {
@@ -29,11 +32,27 @@ $(document).ready(function() {
     }
   );
 
+// RIMUOVE I MESSAGGI
   $(document).on('click', '.delete-message', function() {
     $(this).parent().parent().parent().remove();
   });
+
+// RICERCA UTENTE CONVERSAZIONE
+  $(".search-bar__input").keydown(function(){
+    var inputRicerca = $(this).val().toLowerCase();
+    $(".conversation").each(function(){
+      var nomiConversazioni = $(this).find(".title__name").text().toLowerCase();
+      if (nomiConversazioni.includes(inputRicerca)) {
+        $(this).fadeIn();
+      } else {
+        $(this).fadeOut();
+      }
+    });
+  });
+
 });
 
+// FUNZIONI SCRIPT
 function invioMessaggio() {
   var testoInput = $('.input_message').val();
   var messaggioClonato = $('.container-message + .template_me').clone();
