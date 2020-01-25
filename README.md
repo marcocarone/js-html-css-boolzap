@@ -1,5 +1,7 @@
 ## App messaging platform - Whatsapp clone
 
+![01](https://user-images.githubusercontent.com/57659914/73124733-e8b85a80-3f9e-11ea-9d4a-2a48f94927f3.jpg)
+
 # Funzionalità base
 	
 ● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e cliccando invia il testo viene aggiunto al thread sopra, come messaggio verde <br>
