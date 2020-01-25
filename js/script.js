@@ -88,10 +88,24 @@ function invioMessaggio() {
     $('.right-messages.active').append(messaggioClonato);
     $('.container-message .template_me').removeClass('display-none');
     $('.input_message').val("");
+
     //FUNZIONE MESSAGGIO DI RISPOSTA BOT
     setTimeout(function() {
+      var frasiBot = [
+        "So che mi piaci,perché non penso alle conseguenze.",
+        "Ecco perché mi piaci così tanto.🤗 ",
+        "Da quando ti ho incontrato non so più chi sono.",
+        "Quale parte del “Mi fai impazzire” non ti è chiara",
+        "Meglio in ritardo che struccata 🤗 ",
+        "Non sono Google...non cercarmi solo quando ti servo",
+        "Le sensazioni sono già mezze verità",
+        "Sono a casa, tra poco ti chiamo 💋",
+        "Non saprei",
+        "Non dirmi di no",
+      ];
       var messaggioRisposta2 = $('.template-user').children().clone();
       messaggioRisposta2.find('.message_time').text(orario());
+      messaggioRisposta2.find('.message_text').text(frasiBot[numeroRandom(0, 9)]);
       $('.right-messages.active').append(messaggioRisposta2);
       $('.container-message .message__user').removeClass('display-none');
     }, 1200);
@@ -109,4 +123,8 @@ function orario() {
     minuti = "0" + minuti;
   }
   return ora + ":" + minuti
+}
+
+function numeroRandom(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }

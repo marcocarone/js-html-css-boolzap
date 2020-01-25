@@ -321,7 +321,6 @@ body {
   display: flex;
 }
 
-
 /* DIV INPUT MESSAGGIO */
 .right__input-message {
   padding: 0 16px;
@@ -383,19 +382,18 @@ body {
   padding-top: 10px;
   color: #9d9d9d;
 }
+
 .faccine {
   display: flex;
   flex-wrap: wrap;
-
 }
+
 .faccine li {
   list-style: none;
   font-size: 1.4em;
   padding: 10px 10px 10px 0;
   cursor: pointer;
 }
-
-
 
 /* TEMPLATE SINGOLI MESSAGGI */
 .message__me,
