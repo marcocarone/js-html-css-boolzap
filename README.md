@@ -21,3 +21,5 @@
  
 # Linguaggi utilizzati
 HTML, CSS, JAVASCRIPT, JQUERY
+
+![primo2](https://user-images.githubusercontent.com/57659914/73124954-a5132000-3fa1-11ea-8492-a155831ce3f6.gif)
