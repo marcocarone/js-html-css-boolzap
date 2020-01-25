@@ -46,18 +46,20 @@ $(document).ready(function() {
 
 
   // COLLEGARE CONTATTO  ALLA CHAT
+  $('.convers').removeClass('active');
+  $('.right-messages').removeClass('active');
   $(document).on('click', '.conversation', function() {
-
     var dataChat = $(this).attr('data-chat');
+    $('.splash').addClass('display-none');
     if ($('.conversation').hasClass("active") == true) {
       $('.conversation').removeClass('active');
       $('.right-messages').removeClass('active');
+      $('.convers').removeClass('active');
     }
     $(this).addClass('active');
     $('.right-messages[data-chat="' + dataChat + '"]').addClass('active');
+    $('.convers[data-chat="' + dataChat + '"]').addClass('active');
   });
-
-
 
 });
 
@@ -77,7 +79,7 @@ function invioMessaggio() {
       messaggioRisposta2.find('.message_time').text(orario());
       $('.right-messages.active').append(messaggioRisposta2);
       $('.container-message .message__user').removeClass('display-none');
-    }, 2000);
+    }, 1200);
   }
 }
 

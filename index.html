@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Replica Whatsapp - Marco Carone</title>
@@ -119,12 +119,35 @@
     <div class="main-container__right">
       <div class="right__top-menu">
         <div class="right__top-menu__left">
-          <a class="image" href="#"><img alt="" src="img/lellis.jpg"></a>
-          <div class="top-menu__left__status">
-            <a class="left__status__name" href="#">Giulia De Lellis</a>
-            <a class="left__status__last-access" href="#">ultimo accesso oggi alle 14:00</a>
+
+          <div class="convers active" data-chat="1">
+            <a class="image" href="#"><img alt="" src="img/lellis.jpg"></a>
+            <div class="top-menu__left__status">
+              <a class="left__status__name" href="#">Giulia De Lellis</a>
+              <a class="left__status__last-access" href="#">ultimo accesso oggi alle 14:00</a>
+            </div>
           </div>
+
+          <div class="convers " data-chat="2">
+            <a class="image" href="#"><img alt="" src="img/nargi.jpg"></a>
+            <div class="top-menu__left__status">
+              <a class="left__status__name" href="#">Federica Nargi</a>
+              <a class="left__status__last-access" href="#">ultimo accesso oggi alle 14:00</a>
+            </div>
+          </div>
+
+
+          <div class="convers " data-chat="3">
+            <a class="image" href="#"><img alt="" src="img/belen.jpg"></a>
+            <div class="top-menu__left__status">
+              <a class="left__status__name" href="#">Belen Rodriguez</a>
+              <a class="left__status__last-access" href="#">ultimo accesso oggi alle 14:00</a>
+            </div>
+          </div>
+
         </div>
+
+
         <div class="right__top-menu__right">
           <ul>
             <li>
@@ -157,7 +180,15 @@
       <!-- DIV MESAGGI -->
       <div class="container-message">
 
-        <div  class="right-messages active" data-chat="1">
+
+        <div  class="splash">
+          <img src="img/splash.jpg" alt="splash">
+          <h2>Mantieni il telefono connesso</h2>
+          <h3>La CaronApp si collega al tuo telefono per sincronizzare i messaggi. Per ridurre l'utilizzo dei dati, collega il telefono al WI-FI.</h3>
+        </div>
+
+
+        <div  class="right-messages" data-chat="1">
           <div class="message__user">
             <div class="message__icon">
               <i class="fas fa-chevron-down"></i>
@@ -179,7 +210,7 @@
 
         </div>
         <div  class="right-messages" data-chat="3">
-          
+
         </div>
 
       </div>
