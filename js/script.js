@@ -109,6 +109,11 @@ function invioMessaggio() {
       $('.right-messages.active').append(messaggioRisposta2);
       $('.container-message .message__user').removeClass('display-none');
     }, 1200);
+
+    if ($('.conversation').hasClass("active") == true) {
+      var conversazioneClonata = $('.conversation.active');
+      $('.left__conversations').prepend(conversazioneClonata);
+    }
   }
 }
 
