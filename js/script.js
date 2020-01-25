@@ -63,6 +63,21 @@ $(document).ready(function() {
 
 });
 
+// EMOJI
+
+$(document).on("click", ".faccine li", function() {
+  var emoji = $(this).text();
+  console.log("emoticon copiata: " + emoji);
+  var txt = $('.input_message').val();
+  var txt = $('.input_message').val(txt + emoji);
+});
+
+// MENU TENDINA EMOJI
+
+$(document).on('click', '.right__input-message__icon ', function() {
+  $('.emoticon-container').slideToggle();
+});
+
 // FUNZIONI SCRIPT
 function invioMessaggio() {
   var testoInput = $('.input_message').val();

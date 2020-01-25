@@ -25,7 +25,7 @@ body {
 }
 
 .main-container__left {
-  width: 35%;
+  width: 25%;
   min-width: 350px;
   height: 100%;
   border-right: 1px solid #e3e3e3;
@@ -33,7 +33,7 @@ body {
 
 .main-container__right {
   position: relative;
-  width: 65%;
+  width: 75%;
   min-width: 600px;
   height: 100%;
   background-image: url("../img/bg-chat.jpg");
@@ -84,14 +84,13 @@ body {
 }
 
 .convers {
-  display:none;
+  display: none;
   align-items: center;
 }
 
 .convers.active {
-	display: flex;
+  display: flex;
 }
-
 
 .image img {
   display: block;
@@ -162,7 +161,6 @@ body {
   width: 100%;
   height: 50px;
   padding: 10px 16px;
-
   background-color: #f8f8f8;
 }
 
@@ -279,7 +277,6 @@ body {
   width: 100%;
   height: calc(100% - 70px - 70px);
   overflow-y: scroll;
-
 }
 
 .splash {
@@ -287,12 +284,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
   background-color: #f8f9fa;
   border-bottom: 4px solid #4adf83;
 }
-
 
 .splash img {
   width: 200px;
@@ -311,25 +307,25 @@ body {
   color: rgb(73, 73, 73);
   margin: 0 20px;
   text-align: center;
-
 }
 
 .right-messages {
   display: none;
   flex-direction: column;
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
   padding: 0 80px;
 }
-.right-messages.active {
-	display: flex;
-}
 
+.right-messages.active {
+  display: flex;
+}
 
 
 /* DIV INPUT MESSAGGIO */
 .right__input-message {
   padding: 0 16px;
+  position: relative;
   display: flex;
   width: 100%;
   height: 70px;
@@ -368,6 +364,39 @@ body {
   padding-right: 20px;
 }
 
+/* EMOJI */
+.emoticon-container {
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  height: 200px;
+  width: 100%;
+  padding: 16px;
+  background-color: #ededed;
+  overflow-y: auto;
+  border-bottom: 1px solid #e3e3e3;
+  z-index: 5;
+}
+
+.emoticon-container h3 {
+  font-size: 12px;
+  padding-top: 10px;
+  color: #9d9d9d;
+}
+.faccine {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.faccine li {
+  list-style: none;
+  font-size: 1.4em;
+  padding: 10px 10px 10px 0;
+  cursor: pointer;
+}
+
+
+
 /* TEMPLATE SINGOLI MESSAGGI */
 .message__me,
 .message__user {
@@ -376,6 +405,7 @@ body {
   max-width: 70%;
   font-size: 14px;
   margin-top: 20px;
+  margin-bottom: 10px;
   padding: 20px 30px 20px 20px;
   color: #262626;
   border-radius: 10px;
@@ -383,7 +413,7 @@ body {
 }
 
 .message_menu {
-display: none;
+  display: none;
   position: absolute;
   top: 28px;
   right: 8px;
