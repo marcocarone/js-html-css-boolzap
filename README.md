@@ -19,6 +19,7 @@
 ● Aggiunto orario esatto ai messaggi. <br>
 ● aggiunta schermata iniziale di whatsapp. <br>
 ● l'orario dell'ultimo accesso viene aggiornato quando l'interlocutore invia il messaggio automatico di risposta<br>
+● Scrollbar automatica.
  
 # Linguaggi utilizzati
 HTML, CSS, JAVASCRIPT, JQUERY
