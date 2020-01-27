@@ -89,6 +89,7 @@ function invioMessaggio() {
     $('.container-message .template_me').removeClass('display-none');
     $('.input_message').val("");
     scrollbar();
+    $(".convers.active").find('.left__status__last-access').text("Sta scrivendo... ");
 
     //FUNZIONE MESSAGGIO DI RISPOSTA BOT
     setTimeout(function() {

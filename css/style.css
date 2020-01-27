@@ -313,7 +313,6 @@ body {
 .right-messages {
   display: none;
   flex-direction: column;
-  
   width: 100%;
   padding: 0 80px;
 }
