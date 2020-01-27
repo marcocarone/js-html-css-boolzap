@@ -18,6 +18,7 @@
 ● nella top bar destra viene visualizzata l'immagine e il nome della conversazione attiva. <br>
 ● Aggiunto orario esatto ai messaggi. <br>
 ● aggiunta schermata iniziale di whatsapp. <br>
+● l'orario dell'ultimo accesso viene aggiornato quando l'interlocutore invia il messaggio automatico di risposta<br>
  
 # Linguaggi utilizzati
 HTML, CSS, JAVASCRIPT, JQUERY
