@@ -20,6 +20,7 @@
 ● aggiunta schermata iniziale di whatsapp. <br>
 ● l'orario dell'ultimo accesso viene aggiornato quando l'interlocutore invia il messaggio automatico di risposta<br>
 ● Scrollbar automatica.
+● quando l'interlocutore risponde nella top bar destra compare la digitura " sta scrivendo..."
  
 # Linguaggi utilizzati
 HTML, CSS, JAVASCRIPT, JQUERY
