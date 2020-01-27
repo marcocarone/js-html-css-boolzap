@@ -220,6 +220,7 @@ body {
 .conversation:hover,
 .conversation.active {
   background-color: #e8e8e8;
+  transition: all 300ms ease-in;
 }
 
 .conversation__image {
@@ -320,6 +321,33 @@ body {
 .right-messages.active {
   display: flex;
 }
+
+.splash__animate {
+  -webkit-animation: splash__animate 0.4s cubic-bezier(0.950, 0.050, 0.795, 0.035) both;
+  animation: splash__animate 0.4s cubic-bezier(0.950, 0.050, 0.795, 0.035) both;
+}
+
+@-webkit-keyframes splash__animate {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes splash__animate {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 
 /* DIV INPUT MESSAGGIO */
 .right__input-message {

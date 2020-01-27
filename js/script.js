@@ -82,7 +82,7 @@ $(document).on('click', '.right__input-message__icon ', function() {
 function invioMessaggio() {
   var testoInput = $('.input_message').val();
   if (testoInput.length != 0) {
-    var messaggioClonato = $('.container-message + .template_me').clone();
+    var messaggioClonato = $('#remove').clone();
     messaggioClonato.find('.message_text').text(testoInput);
     messaggioClonato.find('.message_time').text(orario());
     $('.right-messages.active').append(messaggioClonato);
@@ -108,6 +108,10 @@ function invioMessaggio() {
       messaggioRisposta2.find('.message_text').text(frasiBot[numeroRandom(0, 9)]);
       $('.right-messages.active').append(messaggioRisposta2);
       $('.container-message .message__user').removeClass('display-none');
+
+      $(".convers.active").find('.left__status__last-access').text("ultimo accesso oggi alle " + orario());
+      $(".conversation.active").find('.time__last_message').text(orario());
+
     }, 1200);
 
     if ($('.conversation').hasClass("active") == true) {
