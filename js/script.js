@@ -88,6 +88,7 @@ function invioMessaggio() {
     $('.right-messages.active').append(messaggioClonato);
     $('.container-message .template_me').removeClass('display-none');
     $('.input_message').val("");
+    scrollbar();
 
     //FUNZIONE MESSAGGIO DI RISPOSTA BOT
     setTimeout(function() {
@@ -111,7 +112,7 @@ function invioMessaggio() {
 
       $(".convers.active").find('.left__status__last-access').text("ultimo accesso oggi alle " + orario());
       $(".conversation.active").find('.time__last_message').text(orario());
-
+      scrollbar();
     }, 1200);
 
     if ($('.conversation').hasClass("active") == true) {
@@ -136,4 +137,10 @@ function orario() {
 
 function numeroRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function scrollbar() {
+  var altezzaContainer = $(".right-messages.active").height();
+  console.log("altezza" + altezzaContainer);
+  $(".container-message").scrollTop(altezzaContainer);
 }
