@@ -63,6 +63,15 @@ $(document).ready(function() {
 
 });
 
+// CAMBIO ICONA INVIO - MICROFONO
+$(".input_message").focus(function() {
+  $(".invio").addClass("display-none");
+  $(".audio").removeClass("display-none");
+}).blur(function() {
+  $(".audio").addClass("display-none");
+  $(".invio").removeClass("display-none");
+});
+
 // EMOJI
 
 $(document).on("click", ".faccine li", function() {
